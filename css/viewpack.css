@@ -1,0 +1,168 @@
+.pack {
+    position: relative;
+    width: 75%;
+    margin-top: 80px;
+    left: 50%;
+    height: 80%;
+    transform: translateX(-50%);
+    background-color: var(--secondary-color);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: fit-content;
+}
+
+.pack > .box {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+}
+.pack > .box > .icon {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    border-radius: var(--radius);
+    width: 80px;
+    height: 80px;
+    float: right;
+    animation: FadeIn 2s ease;
+}
+.pack > .box > ._bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(97deg, rgba(255, 255, 255, 1) 40%, rgba(255,255,255,0) 70%);
+    animation: RotateIn 1s ease;
+}
+.pack > .box > #info {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    padding: 20px 20px 20px 50px;
+    word-wrap: break-word;
+    animation: FadeIn 3s ease;
+    font-size: 1vw;
+}
+#dl {
+    position: relative;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-100%);
+}
+
+@keyframes RotateIn {
+    0% {
+        transform: translate(-100%, 0);
+    } 100% {
+        transform: translate(0, 0);
+    }
+}
+
+button {
+    padding: 5px 15px;
+    color: var(--highlight);
+    border-radius: 30px;
+    border: solid var(--highlight);
+    background-color: transparent;
+    cursor: pointer;
+    transition: .2s ease;
+    font-weight: 700;
+    font-size: 20;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+button:hover,
+button.selected {
+    color: var(--highlight-alt);
+    border-color: var(--highlight-alt);
+    transition: .2s ease;
+}
+
+@keyframes slide {
+    0% {
+        background-position-x: -100%;
+    }
+
+    100% {
+        background-position-x: 100%;
+    }
+}
+
+.pack > .box > #previews {
+    position: relative;
+    max-height: 100%;
+}
+.pack > .box > #previews > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+    background-color: var(--highlight);
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--text);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+    background-color: var(--text-alt);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}

@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/bedc2eb440.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="css/global.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/ico" href="./assets/images/icons/icon.ico"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="nofollow"/>
+
+    <meta name="description" content="PackHub">
+    <meta name="keywords" content="PackHub is a service which provides Minecraft players with Resource packs for free or purchase. We feature a website, Minecraft Mod, and Discord Bot">
+    <meta name="author" content="MattMX">
+    <link rel="icon" href="./assets/images/icons/icon.ico"> 
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://packhub.net/">
+    <meta property="og:title" content="PackHub">
+    <meta property="og:description" content="PackHub is a service which provides Minecraft players with Resource packs for free or purchase. We feature a website, Minecraft Mod, and Discord Bot">
+    <meta property="og:image" content="./assets/images/icons/icon.ico">
+    <meta name="theme-color" content="#F7971C">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://packhub.net/">
+    <meta property="twitter:title" content="PackHub">
+    <meta property="twitter:description" content="PackHub is a service which provides Minecraft players with Resource packs for free or purchase. We feature a website, Minecraft Mod, and Discord Bot">
+    <meta property="twitter:image" content="./assets/images/icons/icon.ico">
+
+    <title>PackHub</title>
+</head>
+
+<body>
+    <video autoplay muted loop class="bg">
+        <source src="assets/video/bg1.mp4" type="video/mp4">
+        Your browser doesn't support HTML5 video!
+    </video>
+    <div class="header" id="#header">
+        <a href="#" onclick="setPage('index.html')" class="logo">Pack<span>Hub</span></a>
+        <a href="https://discord.gg/CGZGHdnxk3">Discord</a>
+        <a class="active" href="#" onclick="setPage('features.html')">Features</a>
+        <a href="javascript:void(0);" class="icon" onclick="topbar()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class='page-loader'></div>
+    <div class='page-loader'></div>
+    <section id="intro">
+        <div class="center">
+            <h1 class="mega">We're working very hard</h1>
+            <h3>To give you the <span>best</span> experience</h3>
+        </div>
+    </section>
+    <section id="features">
+        <div class="feature">
+            <h1>Discord Bot</h1>
+            <p>Custom coded bot with support for multiple servers.</p>
+            <p>Features feeds of any packs posted over all discord servers, as well as content on the site!</p>
+            <div class="bar">
+                <div class="progress" style="width: 65%; background-color: #3BAA34">
+                    90%
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <h1>In game browser</h1>
+            <p>Look for, and install packs from in game, directly to your game.</p>
+            <p>No BS involved.</p>
+            <button onclick="openUrl('https://github.com/Matt-MX/PackBrowser')">GitHub <i class="fa fa-external-link"></i></button>
+            <div class="bar">
+                <div class="progress" style="width: 65%; background-color: #94C11E">
+                    65%
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <h1>Website</h1>
+            <p>Browse and search for packs on our website</p>
+            <p>Upload, purchase, download packs.</p>
+            <p>Are you a creator? Put your talent to good use and earn $$$.</p>
+            <div class="bar">
+                <div class="progress" style="width: 65%; background-color: #F29200">
+                    40%
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

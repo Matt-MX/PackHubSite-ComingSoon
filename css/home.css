@@ -1,0 +1,61 @@
+.bg.full>.split {
+    width: 100%;
+    height: 100%;
+    /* clip-path: polygon(100% 30%, 0% 100%, 100% 100%); */
+    clip-path: polygon(100% 0, 72% 72%, 0 100%, 100% 100%);
+    background-color: var(--highlight);
+    z-index: -1;
+}
+
+.bg.full>.left {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 0px 50px var(--highlight));
+    text-align: center;
+    z-index: 10;
+    animation: Blink 10s ease-in-out 0s infinite;
+}
+
+.bg.full>.right {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: 50%;
+    transform: translate(0px, -25%);
+    background-image: none;
+    background-repeat: no-repeat;
+    animation: RandomAnim 10s step-start .1s infinite;
+    filter: drop-shadow(0px 0px 10px var(--text-alt));
+    z-index: 9;
+}
+
+@keyframes RandomAnim {
+    33% {
+        background-image: url(/assets/images/other/jump.png);
+    }
+
+    66% {
+        background-image: url(/assets/images/other/tpose.png);
+    }
+
+    100% {
+        background-image: url(/assets/images/other/Run.png);
+    }
+}
+
+@keyframes Blink {
+    0% {
+        filter: drop-shadow(0px 0px 50px var(--highlight));
+    }
+
+    50% {
+        filter: drop-shadow(0px 0px 10px var(--text));
+    }
+
+    0% {
+        filter: drop-shadow(0px 0px 50px var(--highlight));
+    }
+}

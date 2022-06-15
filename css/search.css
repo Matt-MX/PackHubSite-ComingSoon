@@ -1,0 +1,278 @@
+.search-wrapper {
+    width: 50%;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-list {
+    position: relative;
+    float: left;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.dropdown {
+    cursor: pointer;
+    position: inherit;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+    background-color: white;
+    border: 2px solid var(--highlight);
+    padding: 10px;
+}
+
+.current-selection {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.in-wrap {
+    overflow: hidden;
+    height: 100%;
+}
+
+.in-wrap>input[type=text] {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--highlight);
+    border-left: none;
+    border-right: none;
+    border-radius: 0px 0px 0px 0px;
+    line-height: 25px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.in-wrap>input[type=text]:focus {
+    outline: none;
+}
+
+.go-button {
+    float: right;
+    height: 100%;
+    background-color: var(--highlight);
+    border: 1px solid var(--highlight);
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    margin: 0;
+    padding: 0 15px;
+}
+
+.go-button:hover {
+    background-color: rgb(255, 115, 0);
+    cursor: pointer;
+}
+
+#additional_options {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    display: block;
+    background-color: black;
+}
+#additional_options > div {
+    padding: 10px;
+    display: inline;
+    width: 100%;
+}
+
+input[type=checkbox] {
+
+}
+.d {
+    cursor: pointer;
+    position: inherit;
+    left: 0;
+    top: 0;
+    border-radius: var(--radius);
+    background-color: white;
+    border: 2px solid var(--highlight);
+    padding: 4px;
+    margin-top: 10px;
+}
+.packs-block > .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--main-color);
+    width: calc(50% - 13px);
+    height: 200px;
+    margin: auto;
+    margin-top: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: .2s ease;
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+    margin-right: 10px;
+    animation: FadeIn 1s ease;
+}
+.packs-block > .card > .price {
+    float: right;
+    right: 20px;
+    top: 0px;
+    position: relative;
+    text-align: right;
+}
+@media screen and (max-width: 800px) {
+    .packs-block > .card > .price {
+        display: none;
+    }
+    .packs-block > .card > .content {
+        font-size: xx-small;
+    }
+  }
+.packs-block > .card > img {
+    position: absolute;
+    float: left;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: .2s ease;
+}
+.card:hover img {
+    transform:scale(1.3);
+    transition: .2s ease;
+}
+.packs-block > .card > .content {
+    background: linear-gradient(100deg, var(--main-color) 30%, rgba(255,255,255,0) 70%);
+    background-position:-200px 0px;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: calc(100% - 20px);
+    position: absolute;
+    display: block;
+    top: 0px;
+    padding: 10px 20px 0px 20px;
+    line-height: 0.1em;
+    transition: .5s ease;
+}
+.packs-block > .card > .content:hover {
+    background-position: 0px 0px;
+    transition: .8s ease;
+}
+.packs-block > .card > .content > .tags {
+    bottom: -1px;
+    left: 0px;
+    height: auto;
+    position: absolute;
+    text-align: center;
+    width: calc(100% - 20px);
+    background-color: var(--highlight);
+    transform: translateY(-50%);
+    padding: 0px 0px 20px 0px;
+}
+
+.packs-inline > .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--main-color);
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    display: inline-block;
+    cursor: pointer;
+    transition: .2s ease;
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+    margin-right: 10px;
+    animation: FadeIn 1s ease;
+}
+.card:hover {
+    background-color: var(--secondary-color);
+    filter: contrast(1.1);
+    transition: .2s ease;
+}
+.card > .more {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: xx-large;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-align: center;
+    transition: .3s ease;
+}
+.card > .more:hover {
+    color: var(--text-alt);
+    transition: .3s ease;
+}
+.packs-inline > .card > img {
+    position: absolute;
+    float: left;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+    transition: .2s ease;
+}
+.packs-inline > .card > .content {
+    background-color: white;
+    height: 50%;
+    width: calc(100% - 20px);
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    padding: 0px 10px 0px 10px;
+    line-height: 0.1em;
+}
+.packs-inline > .card > .content > .tags {
+    bottom: 0px;
+    left: 0px;
+    height: auto;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-color: var(--text);
+    padding: 0px 0px 20px 0px;
+}
+.display {
+    height: auto;
+    display: block;
+    padding: 10px;
+    margin: 20px;
+    background-color: var(--secondary-color);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.display > h2 {
+    padding-left: 20px;
+}
+.packs-inline {
+    height: auto;
+    white-space: nowrap;
+    display: block;
+    padding: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.packs-block {
+    height: auto;
+    display: block;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+span.tag {
+    background-color: var(--text);
+    border-radius: var(--radius);
+    color: white;
+    padding: 1px 8px 1px 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+span.tag.exclusive {
+    background-color: var(--highlight);
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
